@@ -1,0 +1,14 @@
+---
+const { lang='en' } = Astro.props;
+const sl = lang === 'sl';
+---
+<div class="packArt packPhotoCard" aria-label={sl ? 'Nani Pup pack kužkov v alpskem okolju' : 'Nani Pup dog pack in an alpine setting'}>
+  <div class="packPhotoFrame">
+    <img src="/nani-pack.png" alt={sl ? 'Dva kužka v alpskem okolju ob jezeru' : 'Two dogs in an alpine setting by a lake'} loading="lazy" />
+    <span class="packPhotoNote">{sl ? 'isti kraji · nove pasje zgodbe ♡' : 'same places · new dog stories ♡'}</span>
+  </div>
+  <div class="packArtCaption">
+    <span>{sl ? 'Nani je začela zgodbo.' : 'Nani started the story.'}</span>
+    <strong>{sl ? 'Danes pack raste z vsakim kužkom, ki ga spoznamo.' : 'Now the pack grows with every dog we meet.'}</strong>
+  </div>
+</div>

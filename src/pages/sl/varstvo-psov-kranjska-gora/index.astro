@@ -1,0 +1,15 @@
+---
+import ServicePage from '../../../layouts/ServicePage.astro';
+const prices=[
+{name:'Kratko varstvo',desc:'Sprehod, družba in osnovna rutina.',price:'od 35 €',note:'Cena vključuje lokalno logistiko po dogovoru.'},
+{name:'Pol dneva',desc:'Približno 4 ure individualne družbe in gibanja.',price:'od 65 €',note:'Izbrani termini v Kranjski Gori.'},
+{name:'Pasji Adventure Day',desc:'3–4 ure prilagojenega izleta z Nani.',price:'od 95 €',note:'Pot izberemo glede na psa, vreme in teren.'}
+];
+const guides=[{tag:'KRANJSKA GORA',label:'Kranjska Gora s psom',href:'/sl/blog/kranjska-gora-s-psom/'},{tag:'DOGODIVŠČINA',label:'Pasji Adventure Day',href:'/sl/pasji-adventure-dan/'},{tag:'SLOVENIJA',label:'Potovanje po Sloveniji s psom',href:'/sl/blog/potovanje-po-sloveniji-s-psom/'}];
+const faqs=[
+{q:'Ali lahko psa pelješ na izlet, medtem ko smo mi na turi?',a:'Da, če je kuža zdrav, vedenjsko primeren in so razmere varne. Dogodivščina je prilagojena psu, ne zahtevnosti vaše ture.'},
+{q:'Ali je lahko pes spuščen?',a:'Ni potrebno. Varstvo in izlet lahko potekata na povodcu ali dolgem povodcu. V zaščitenih območjih upoštevamo lokalna pravila.'},
+{q:'Ali prevzameš psa pri apartmaju ali hotelu?',a:'Pogosto da, po predhodnem dogovoru glede lokacije in časa.'}
+];
+---
+<ServicePage lang="sl" title="Varstvo psov Kranjska Gora | Nani Pup" description="Individualno varstvo psov v Kranjski Gori: sprehodi, pol-dnevno varstvo in pasji Adventure Day za domačine in obiskovalce Gorenjske." canonical="/sl/varstvo-psov-kranjska-gora/" alternateEn="/dog-sitting-kranjska-gora/" alternateSl="/sl/varstvo-psov-kranjska-gora/" eyebrow="KRANJSKA GORA / VARSTVO" heading="Varstvo psov v <em>Kranjski Gori.</em>" intro="Za dneve, ko greste na aktivnost, ki za vašega psa ni najboljša izbira — on pa vseeno dobi dober dan." bodyTitle="Alpsko varstvo brez pritiska." body="<p>Kranjska Gora ponuja ogromno možnosti za gibanje, vendar niso vsi izleti, vremenske razmere in aktivnosti primerni za vsakega psa. Nani Pup je možnost, da kuža ni sam v apartmaju ali avtu, medtem ko vi izkoristite svoj dan.</p><p>Varstvo lahko ostane lokalno in mirno ali pa ga za primernega psa spremenimo v pasjo dogodivščino na varni poti.</p>" locationNote="Kranjska Gora · Mojstrana · izbrani termini Zgornjesavske doline" prices={prices} faqs={faqs} guides={guides} />

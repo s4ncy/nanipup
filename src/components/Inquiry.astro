@@ -1,0 +1,20 @@
+---
+const { lang='en' } = Astro.props;
+const sl = lang === 'sl';
+---
+<section class="inquiry" id="inquiry">
+ <div class="inquiryText">
+  <div class="kicker">07 / {sl ? 'Povej nam o kužku' : 'Tell us about your dog'}</div>
+  <h2>{sl ? <>Kdo je<br/>tvoj kuža?</> : <>Who's<br/>your dog?</>}</h2>
+  <p>{sl ? 'Začni pri njem, ne pri datumu. Povej njegovo ime, starost, karakter, kaj obožuje in kaj mu je težje — potem pa kaj potrebuješ ti.' : 'Start with them, not the dates. Tell us their name, age, temperament, what they love, what they find difficult — and what you need while you are in Slovenia.'}</p>
+ </div>
+ <form class="form" data-mailto>
+  <div class="field"><label>{sl ? 'Tvoje ime' : 'Your name'}</label><input name="name" required placeholder="Sanja"/></div>
+  <div class="field"><label>{sl ? 'Ime kužka' : "Dog's name"}</label><input name="dog" required placeholder="Milo"/></div>
+  <div class="field"><label>{sl ? 'Lokacija' : 'Where'}</label><select name="location"><option>Kranjska Gora</option><option>Bled / Gorenjska</option><option>Bohinj</option><option>Ljubljana</option><option>{sl ? 'Drugje po Sloveniji' : 'Elsewhere in Slovenia'}</option></select></div>
+  <div class="field"><label>{sl ? 'Potrebujem' : 'I need'}</label><select name="service"><option>{sl ? 'Individualno varstvo' : 'Private dog sitting'}</option><option>{sl ? 'Sprehod / obisk' : 'Dog walking / visit'}</option><option>{sl ? 'Pasji Adventure Day' : 'Dog Adventure Day'}</option><option>{sl ? 'Poročni pasji concierge' : 'Wedding dog concierge'}</option><option>{sl ? 'Fotografiranje s kužkom' : 'Family dog photography'}</option></select></div>
+  <div class="field"><label>{sl ? 'Povej nam o kužku' : 'Tell us about them'}</label><textarea name="about" placeholder={sl ? 'Milo je star 4 leta, obožuje ljudi, pri drugih samcih potrebuje malo prostora ...' : 'Milo is 4, loves people, needs a little space from other male dogs...'}></textarea></div>
+  <div class="field"><label>Email</label><input name="email" type="email" required placeholder="hello@example.com"/></div>
+  <button class="send">{sl ? 'POŠLJI POVPRAŠEVANJE →' : 'SEND AN ENQUIRY →'}</button>
+ </form>
+</section>

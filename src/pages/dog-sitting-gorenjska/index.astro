@@ -1,0 +1,19 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+const prices=[
+{name:'Local Visit',desc:'A walk, company, food or a familiar routine check-in.',price:'from €35',note:'Bled–Lesce–Radovljica area; exact quote by location.'},
+{name:'Half-Day Nani',desc:'Around 4 hours of private care with movement and downtime.',price:'from €95',note:'Good for work, excursions and event days.'},
+{name:'Full-Day Companion',desc:'Longer private care shaped around the dog’s normal rhythm.',price:'from €150',note:'Limited capacity and advance booking recommended.'}
+];
+const faqs=[
+{q:'Which parts of Gorenjska do you cover?',a:'Bled, Lesce and Radovljica are the core area, with selected dates in Kranjska Gora and other parts of Gorenjska.'},
+{q:'Can you care for two dogs from the same household?',a:'Often yes. Tell us about both dogs in the enquiry so the plan and price can be adapted.'},
+{q:'Is a meet-and-walk possible before longer care?',a:'Yes, and for regular local care it is often the best way to start.'}
+];
+const guides=[
+{tag:'BLED',label:'Dog-Friendly Bled',href:'/journal/dog-friendly-bled/'},
+{tag:'KRANJSKA GORA',label:'Kranjska Gora with a dog',href:'/journal/dog-friendly-kranjska-gora/'},
+{tag:'ROAD TRIP',label:'Travelling Slovenia with a dog',href:'/journal/travelling-slovenia-with-dog/'}
+];
+---
+<ServicePage title="Private Dog Sitting Gorenjska | Bled, Lesce & Radovljica — Nani Pup" description="Private dog sitting in Gorenjska, Slovenia: Bled, Lesce, Radovljica and selected alpine locations. Individual visits, half-day and full-day care." canonical="/dog-sitting-gorenjska/" alternateEn="/dog-sitting-gorenjska/" alternateSl="/sl/varstvo-psov-gorenjska/" eyebrow="GORENJSKA / LOCAL NANI" heading="Private dog care across <em>Gorenjska.</em>" intro="A local, small-capacity option for dogs who are happier with one calm person than a busy group setting." bodyTitle="The home territory of Nani Pup." body="<p>Gorenjska is where Nani Pup is most available: Bled, Lesce, Radovljica and selected alpine locations. Care can be a simple visit, a proper walk, a half-day or a longer private day.</p><p>The service is intentionally small. We learn the dog’s routine, energy, social preferences and little quirks, then build care around that instead of forcing every dog into the same timetable.</p>" locationNote="Bled · Lesce · Radovljica · selected Gorenjska" prices={prices} faqs={faqs} guides={guides} />

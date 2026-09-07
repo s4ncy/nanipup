@@ -1,0 +1,9 @@
+{
+  "name": "Nani Pup",
+  "short_name": "Nani Pup",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3efe6",
+  "theme_color": "#17231c",
+  "icons": []
+}

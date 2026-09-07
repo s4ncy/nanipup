@@ -1,0 +1,16 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+const prices=[
+{name:'Adventure Half-Day',desc:'Around 3–4 hours of pick-up, trail time, sniffing, breaks and return.',price:'from €160',note:'Bled / Kranjska Gora area. Dog suitability applies.'},
+{name:'Long Adventure Day',desc:'A longer day with movement and a generous rest rhythm.',price:'from €220',note:'Route and duration depend on dog and conditions.'},
+{name:'Adventure + Memories',desc:'Adventure care plus a short curated photo story of your dog outdoors.',price:'from €320',note:'A lovely travel keepsake.'}
+];
+const guides=[{tag:'KRANJSKA GORA',label:'Kranjska Gora with a dog',href:'/journal/dog-friendly-kranjska-gora/'},{tag:'LAKE BLED',label:'Dog-Friendly Bled',href:'/journal/dog-friendly-bled/'},{tag:'MEMORIES',label:'Dog + family photography in Slovenia',href:'/dog-family-photography-slovenia/'}];
+const faqs=[
+{q:'What kind of adventure is it?',a:'Not a forced mountain hike. It could be a forest trail, riverside walk, easy alpine route or scent-heavy slow day, depending on the dog.'},
+{q:'Is it suitable for puppies or older dogs?',a:'Potentially, but the outing would be much gentler and shorter. Age, health and veterinary restrictions must be disclosed before booking.'},
+{q:'What happens in bad weather?',a:'We adapt the route, timing or activity. Extreme heat, storms, unsafe snow or other conditions can mean the Adventure Day becomes calmer care instead.'},
+{q:'Do you follow Triglav National Park rules?',a:'Yes. Protected-area rules, marked routes and leash requirements are respected. The dog’s safety and the environment come before the route.'}
+];
+---
+<ServicePage title="Dog Adventure Day Slovenia | Nani Pup Alpine Dog Concierge" description="A private Dog Adventure Day around Lake Bled and Kranjska Gora: tailored walks, forest trails, enrichment, pick-up and updates while you enjoy your own Slovenia plans." canonical="/dog-adventure-day-slovenia/" alternateEn="/dog-adventure-day-slovenia/" alternateSl="/sl/pasji-adventure-dan/" eyebrow="ALPINE PACK CLUB / ADVENTURE" heading="A real day out for <em>your dog.</em>" intro="More than dog sitting: a tailored mini adventure while you hike, celebrate, work, relax or explore somewhere your dog cannot join." bodyTitle="The route belongs to the dog." body="<p>Nani Adventure Day is for owners who do not want their dog simply waiting out the day. We collect them, choose an appropriate route and build a few hours around movement, sniffing, curiosity and rest.</p><p>There is no fixed mountain to conquer. A young energetic dog and a senior dog should not receive the same adventure. Weather, terrain, fitness, behaviour, protected-area rules and previous experience all shape the plan.</p><p>You receive photo and message updates, and your dog comes back having had their own version of a good Slovenian day.</p>" locationNote="Best suited to Lake Bled · Gorenjska · Kranjska Gora" prices={prices} faqs={faqs} guides={guides} />

@@ -1,0 +1,15 @@
+---
+import ServicePage from '../../../layouts/ServicePage.astro';
+const prices=[
+{name:'Sprehod / obisk',desc:'45–60 minut sprehoda, hranjenja ali družbe.',price:'od 18 €',note:'Osnovna cona Bled–Lesce–Radovljica.'},
+{name:'Pol dneva',desc:'Do približno 4 ure individualnega varstva.',price:'od 45 €',note:'Dodatna kilometrina izven osnovne cone.'},
+{name:'Cel dan',desc:'Daljše individualno varstvo z gibanjem in počitkom.',price:'od 70 €',note:'Po dogovoru glede psa, lokacije in urnika.'}
+];
+const guides=[{tag:'BLED',label:'Bled s psom',href:'/sl/blog/bled-s-psom/'},{tag:'KRANJSKA GORA',label:'Kranjska Gora s psom',href:'/sl/blog/kranjska-gora-s-psom/'},{tag:'VZGOJA',label:'7-dnevni izziv Nauči svojega psa',href:'/sl/izziv/'}];
+const faqs=[
+{q:'Kje na Gorenjskem dela Nani Pup?',a:'Osnovna cona so Bled, Lesce in Radovljica, z izbranimi termini v Kranjski Gori in drugje po Gorenjski.'},
+{q:'Ali sprejemaš več psov hkrati?',a:'Koncept je majhna kapaciteta in individualen pristop. Če gre za dva psa iz istega gospodinjstva, to napiši v povpraševanju.'},
+{q:'Ali lahko najprej naredimo spoznavni sprehod?',a:'Seveda, pri daljšem ali rednem varstvu je to pogosto najboljši začetek.'}
+];
+---
+<ServicePage lang="sl" title="Varstvo psov Gorenjska | Bled, Lesce, Radovljica — Nani Pup" description="Individualno varstvo psov na Gorenjskem: Bled, Lesce, Radovljica, Kranjska Gora in okolica. Sprehod, obisk, pol-dnevno in celodnevno varstvo." canonical="/sl/varstvo-psov-gorenjska/" alternateEn="/dog-sitting-bled-slovenia/" alternateSl="/sl/varstvo-psov-gorenjska/" eyebrow="GORENJSKA / LOCAL NANI" heading="Individualno varstvo psov na <em>Gorenjskem.</em>" intro="Manj kapacitete, več odnosa — za domačine, ki iščejo zanesljiv sprehod, obisk ali varstvo brez občutka pasjega hotela." bodyTitle="Lokalno, osebno in prilagojeno." body="<p>Nani Pup izhaja iz preproste ideje: nekateri psi so najbolj sproščeni, ko jih varuje ena oseba, ki pozna njihove navade. Zato ostaja kapaciteta omejena, komunikacija pa neposredna.</p><p>Največ terminov je na voljo na območju Bleda, Lesc in Radovljice. Kranjska Gora in druge lokacije po Gorenjski so možne glede na urnik.</p>" locationNote="Bled · Lesce · Radovljica · Kranjska Gora · Gorenjska" prices={prices} faqs={faqs} guides={guides} />

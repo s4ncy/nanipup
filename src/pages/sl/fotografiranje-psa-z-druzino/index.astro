@@ -1,0 +1,19 @@
+---
+import ServicePage from '../../../layouts/ServicePage.astro';
+const prices=[
+{name:'Nani Memories',desc:'Sproščeno fotografiranje psa z družino na prostem.',price:'od 300 €',note:'Bled / Gorenjska.'},
+{name:'Adventure + Memories',desc:'Pasja dogodivščina in kratka fotografska zgodba.',price:'od 180 €',note:'Kot dodatek k lokalnemu Adventure Day.'},
+{name:'Daljša zgodba',desc:'Več lokacije, več sprehoda in več skupnih trenutkov.',price:'od 400 €',note:'Po dogovoru glede lokacije in trajanja.'}
+];
+const faqs=[
+{q:'Ali mora pes znati pozirati?',a:'Ne. Fotografiranje je narejeno za normalne pse: hodimo, vohamo, se igramo, crkljamo in vmes ujamemo trenutke.'},
+{q:'Lahko fotografiramo na Bledu?',a:'Seveda. Lokacijo in uro izberemo glede na svetlobo, sezono, gnečo in karakter kužka.'},
+{q:'Lahko fotografiranje združimo z Adventure Day?',a:'Da. Adventure + Memories je ravno temu namenjen.'}
+];
+const guides=[
+{tag:'BLED S PSOM',label:'Kam s psom na Bledu',href:'/sl/blog/bled-s-psom/'},
+{tag:'DOGODIVŠČINA',label:'Pasji Adventure Day',href:'/sl/pasji-adventure-dan/'},
+{tag:'SPOMINI',label:'Nani Memory Journal',href:'/sl/trgovina/'}
+];
+---
+<ServicePage lang="sl" title="Fotografiranje psa z družino | Bled in Gorenjska — Nani Pup" description="Naravno fotografiranje psa z družino na Bledu in Gorenjskem. Sproščen sprehod, igra, crkljanje in resnični skupni trenutki." canonical="/sl/fotografiranje-psa-z-druzino/" alternateEn="/dog-family-photography-slovenia/" alternateSl="/sl/fotografiranje-psa-z-druzino/" eyebrow="NANI MEMORIES / FOTOGRAFIRANJE" heading="Tudi blatne tačke so del <em>družinske zgodbe.</em>" intro="Sproščeno fotografiranje s kužkom na Bledu ali Gorenjskem — brez perfekcionizma, z veliko gibanja in vajinih resničnih navad." bodyTitle="Najprej gremo na sprehod. Potem ujamemo, kar se zgodi." body="<p>Nani Memories ni klasično pasje poziranje. Hodimo, se ustavimo, igramo, crkljamo in pustimo kužku dovolj časa, da je lahko to, kar je.</p><p>Fotografiranje je primerno za družine, pare in posameznike, ki želijo ohraniti točno to obdobje skupnega življenja.</p>" locationNote="Bled · Lesce · Radovljica · Gorenjska" prices={prices} faqs={faqs} guides={guides} />

@@ -1,0 +1,35 @@
+---
+const { lang='en' } = Astro.props;
+const sl=lang==='sl';
+const links = sl ? {
+  bled:'/sl/varstvo-psov-bled/', kg:'/sl/varstvo-psov-kranjska-gora/',
+  bohinj:'/sl/varstvo-psov-bohinj/', gorenjska:'/sl/varstvo-psov-gorenjska/', lj:'/sl/varstvo-psov-ljubljana/'
+} : {
+  bled:'/dog-sitting-bled-slovenia/', kg:'/dog-sitting-kranjska-gora/',
+  bohinj:'/dog-sitting-bohinj/', gorenjska:'/dog-sitting-gorenjska/', lj:'/dog-sitting-ljubljana/'
+};
+---
+<section class="route routeClean">
+  <div class="routeText">
+    <div class="kicker">03 / {sl ? 'Nanine najljubše poti' : "Nani's favourite routes"}</div>
+    <h2>{sl ? <>Poti, kjer je Nani<br/><em>najbolj uživala.</em></> : <>The places Nani<br/><em>loved most.</em></>}</h2>
+    <p>{sl
+      ? 'Kranjska Gora, Bled, Bohinj in poti po Gorenjski niso samo lokacije na zemljevidu. To so kraji, kjer je Nani hodila, vohala, raziskovala in bila preprosto srečen pes. Danes te iste kraje pokažemo tudi vašim kužkom — po njihovem tempu in glede na to, kaj jim res ustreza.'
+      : 'Kranjska Gora, Lake Bled, Bohinj and the trails of Gorenjska are more than pins on a map. They are places where Nani walked, sniffed, explored and was simply a happy dog. Today we share those same landscapes with yours — at their pace, in a way that genuinely suits them.'}</p>
+    <a class="pill" style="border-color:#f3efe6;margin-top:24px" href={sl?'/sl/pasji-adventure-dan/':'/dog-adventure-day-slovenia/'}>{sl?'Poglej Nani Adventure Day →':'Explore Nani Adventure Day →'}</a>
+  </div>
+  <div class="trailPanel" aria-label={sl ? 'Nanine poti po Sloveniji' : "Nani's routes in Slovenia"}>
+    <div class="trailMain">
+      <a class="trailStop" href={links.kg}><span class="trailNo">01</span><span><b>Kranjska Gora</b><small>{sl?'gore · gozd · začetek poti':'mountains · forest · trail beginnings'}</small></span></a>
+      <span class="trailLine"></span>
+      <a class="trailStop heroStop" href={links.bled}><span class="trailNo">02</span><span><b>Bled</b><small>{sl?'jezero · sprehodi · domači kotički':'lake · walks · familiar corners'}</small></span></a>
+      <span class="trailLine"></span>
+      <a class="trailStop" href={links.bohinj}><span class="trailNo">03</span><span><b>Bohinj</b><small>{sl?'voda · narava · počasnejši dnevi':'water · nature · slower days'}</small></span></a>
+    </div>
+    <div class="trailBranches">
+      <a href={links.gorenjska}><span>↗</span><b>Gorenjska</b><small>{sl?'še več poti, ki jih poznamo':'more trails we know'}</small></a>
+      <a href={links.lj}><span>↘</span><b>Ljubljana</b><small>{sl?'izbrano mestno varstvo':'selected city care'}</small></a>
+      <div class="trailQuote">{sl?'Isti kraji. Nove pasje zgodbe.':'Same places. New dog stories.'}</div>
+    </div>
+  </div>
+</section>

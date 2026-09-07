@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nanipup.eu/sitemap.xml

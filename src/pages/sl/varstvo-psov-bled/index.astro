@@ -1,0 +1,15 @@
+---
+import ServicePage from '../../../layouts/ServicePage.astro';
+const prices=[
+{name:'Sprehod / obisk',desc:'45–60 minut sprehoda, družbe, hrane ali rutine.',price:'od 18 €',note:'Za Bled, Lesce, Radovljico in bližnjo okolico.'},
+{name:'Kratko varstvo',desc:'Približno 2 uri individualnega varstva.',price:'od 30 €',note:'Po dogovoru glede lokacije in potreb psa.'},
+{name:'Celodnevno varstvo',desc:'Daljše individualno varstvo z gibanjem in počitkom.',price:'od 70 €',note:'Za redna varstva je možen dogovor za paket.'}
+];
+const guides=[{tag:'BLED S PSOM',label:'Kam s psom na Bledu',href:'/sl/blog/bled-s-psom/'},{tag:'DOGODIVŠČINA',label:'Pasji Adventure Day',href:'/sl/pasji-adventure-dan/'},{tag:'POROKA',label:'Kako vključiti psa v poroko',href:'/sl/blog/poroka-s-psom/'}];
+const faqs=[
+{q:'Ali je to pasji hotel?',a:'Ne. Nani Pup je namenoma manjša, bolj osebna oblika varstva, predvsem za pse, ki jim individualen pristop bolj ustreza.'},
+{q:'Ali lahko psa prevzameš pri meni doma ali na nastanitvi?',a:'Odvisno od lokacije in termina. Pri povpraševanju napiši točen kraj, da potrdimo logistiko.'},
+{q:'Ali je možno redno tedensko varstvo?',a:'Da, če se termini ujemajo in je kuža primeren za način varstva. Za redne stranke se lahko dogovorimo za paket.'}
+];
+---
+<ServicePage lang="sl" title="Varstvo psov Bled | individualno varstvo in sprehodi — Nani Pup" description="Individualno varstvo psov na Bledu in v okolici: sprehodi, obiski, kratko in celodnevno varstvo ter pasje dogodivščine. Osebno, mirno in po dogovoru." canonical="/sl/varstvo-psov-bled/" alternateEn="/dog-sitting-bled-slovenia/" alternateSl="/sl/varstvo-psov-bled/" eyebrow="BLED / VARSTVO PSOV" heading="Varstvo psov na <em>Bledu.</em>" intro="Za domačine in kužke, ki potrebujejo nekaj ur dobre družbe, sprehod ali cel dan v bolj osebnem ritmu." bodyTitle="Varstvo, kjer je kuža dejansko opažen." body="<p>Nani Pup je namenjen lastnikom, ki jim klasično skupinsko varstvo ali pasji hotel ne ustreza. Na Bledu in v bližnji okolici ponujamo sprehode, obiske in individualno varstvo po dogovoru.</p><p>Pred prvim daljšim varstvom se pogovorimo o rutini, hrani, odnosu do drugih psov, morebitnih strahovih in posebnostih. Cilj je, da je dan čim bolj podoben dobremu dnevu doma.</p>" locationNote="Bled · Lesce · Radovljica · bližnja Gorenjska" prices={prices} faqs={faqs} guides={guides} />

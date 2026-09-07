@@ -1,0 +1,16 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+const prices=[
+{name:'Little Escape',desc:'Up to around 2 hours of private company, a walk and routine care.',price:'from €70',note:'Ideal for spa, dinner, castle or a short excursion.'},
+{name:'Alpine Half-Day',desc:'Up to around 4 hours with a proper walk, rest and updates.',price:'from €120',note:'Built around your dog’s normal rhythm.'},
+{name:'Full-Day Companion',desc:'A longer day of private care, movement, meals and downtime.',price:'from €180',note:'Exact timing and pick-up arranged by enquiry.'}
+];
+const guides=[{tag:'LAKE BLED',label:'Dog-Friendly Bled: what you can actually do',href:'/journal/dog-friendly-bled/'},{tag:'ADVENTURE',label:'Dog Adventure Day',href:'/dog-adventure-day-slovenia/'},{tag:'WEDDING',label:'Bringing your dog to a wedding in Slovenia',href:'/journal/wedding-in-slovenia-with-dog/'}];
+const faqs=[
+{q:'Can you collect my dog from a hotel in Bled?',a:'Usually yes, subject to location, timing and the dog being comfortable with handover. Tell us where you are staying in your enquiry.'},
+{q:'Is this a kennel or group daycare?',a:'No. Nani Pup is designed around private, relationship-led care with intentionally limited capacity.'},
+{q:'Can my dog join an Adventure Day instead of staying in?',a:'Yes, if their health, temperament, fitness and the weather make it a good fit. See the Dog Adventure Day page.'},
+{q:'Do you also cover Bohinj?',a:'Selected bookings elsewhere in Gorenjska may be possible. Send the exact location and date and we will confirm availability.'}
+];
+---
+<ServicePage title="Private Dog Sitting in Lake Bled, Slovenia | Nani Pup" description="Private dog sitting and dog concierge in Lake Bled, Slovenia. Individual care for hotel guests, couples, wedding guests and travellers who do not want to leave their dog alone." canonical="/dog-sitting-bled-slovenia/" alternateEn="/dog-sitting-bled-slovenia/" alternateSl="/sl/varstvo-psov-bled/" eyebrow="LAKE BLED / DOG SITTING" heading="Private dog sitting in <em>Lake Bled.</em>" intro="A calm local option when your Bled plans cannot include your dog — without sending them into a busy kennel environment." bodyTitle="Your dog gets a Bled day of their own." body="<p>Lake Bled is wonderfully dog-friendly for many walks and outdoor stops, but not every part of a holiday works with a dog. Spa time, longer attractions, wedding timelines, restaurant plans or weather can leave owners needing a few reliable hours of care.</p><p>Nani Pup offers private dog sitting around Bled and nearby Gorenjska. The day can include a walk, food, water, company, rest and updates, adapted to your dog’s habits and temperament.</p>" locationNote="Lake Bled · Lesce · Radovljica · selected Gorenjska" prices={prices} faqs={faqs} guides={guides} />

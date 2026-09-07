@@ -1,0 +1,19 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+const prices=[
+{name:'Ceremony Companion',desc:'Calm handling around portraits or ceremony plus care before/after.',price:'from €240',note:'Best for short wedding appearances.'},
+{name:'Wedding Dog Concierge',desc:'Transport, handling, breaks and private care around the wedding timeline.',price:'from €390',note:'Lake Bled / Gorenjska; custom quote elsewhere.'},
+{name:'Concierge + Memories',desc:'Wedding dog handling plus a small separate dog/family photo story.',price:'from €520',note:'For couples who want the dog in the story without giving them a 12-hour job.'}
+];
+const faqs=[
+{q:'Can our dog join only the ceremony and portraits?',a:'Yes. In fact, that is often the most comfortable plan: meaningful participation, then a quiet reset away from the crowd.'},
+{q:'Can you collect the dog from our hotel?',a:'Often yes around Bled and Gorenjska. Exact transport depends on timing, location and the dog.'},
+{q:'Do you work with the photographer or planner?',a:'Yes. A simple shared timeline keeps handovers, portraits and rest periods smooth.'}
+];
+const guides=[
+{tag:'WEDDING GUIDE',label:'Bringing your dog to a wedding in Slovenia',href:'/journal/wedding-in-slovenia-with-dog/'},
+{tag:'LAKE BLED',label:'Dog-Friendly Bled',href:'/journal/dog-friendly-bled/'},
+{tag:'PRIVATE CARE',label:'Dog sitting in Lake Bled',href:'/dog-sitting-bled-slovenia/'}
+];
+---
+<ServicePage title="Wedding Dog Concierge Slovenia | Lake Bled Pet Care — Nani Pup" description="Wedding dog concierge in Slovenia: calm handling, transport, ceremony and portrait support, breaks and private dog care for Lake Bled and Gorenjska weddings." canonical="/wedding-dog-concierge-slovenia/" alternateEn="/wedding-dog-concierge-slovenia/" alternateSl="/sl/porocni-pasji-concierge/" eyebrow="WEDDINGS / DOG CONCIERGE" heading="Let your dog join the <em>right part</em> of the wedding." intro="They can be in the ceremony, portraits and story — without spending the whole day waiting in noise, heat and unfamiliar crowds." bodyTitle="A wedding role designed for the dog, too." body="<p>Nani Pup can handle the logistics around your dog’s wedding appearance: collection, a calm walk before portraits, transport, water, breaks, ceremony handling and private care once their part is finished.</p><p>The result is simple: you get the moments you dreamed of, your photographer gets a calm window to work, and your dog gets to leave before the day stops being fun.</p>" locationNote="Best suited to Lake Bled · Gorenjska · selected Slovenia weddings" prices={prices} faqs={faqs} guides={guides} />

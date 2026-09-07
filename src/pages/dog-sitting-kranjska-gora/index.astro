@@ -1,0 +1,15 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+const prices=[
+{name:'Short Alpine Care',desc:'Short private care with walk, company and routine needs.',price:'from €80',note:'Kranjska Gora bookings depend on travel and timing.'},
+{name:'Half-Day Care',desc:'A longer private care window with a tailored walk and rest.',price:'from €135',note:'Good for activities where your dog cannot comfortably join.'},
+{name:'Adventure Day',desc:'A planned outing adapted to the dog, terrain and weather.',price:'from €160',note:'Fitness and temperament screening applies.'}
+];
+const guides=[{tag:'KRANJSKA GORA',label:'Kranjska Gora with a dog',href:'/journal/dog-friendly-kranjska-gora/'},{tag:'ADVENTURE',label:'Nani Dog Adventure Day',href:'/dog-adventure-day-slovenia/'},{tag:'SLOVENIA',label:'Travelling Slovenia with a dog',href:'/journal/travelling-slovenia-with-dog/'}];
+const faqs=[
+{q:'Can you take my dog hiking while I do another activity?',a:'Potentially yes. The route is chosen for the dog, not for Instagram: age, health, heat, snow, terrain and local rules come first.'},
+{q:'Do dogs need to be off leash?',a:'No. Adventure care can be done on leash or long line. In protected natural areas local leash rules are followed.'},
+{q:'Can you collect from a Kranjska Gora hotel?',a:'Often yes by prior arrangement. Send your hotel, dates and preferred time window.'}
+];
+---
+<ServicePage title="Dog Sitting Kranjska Gora | Private Dog Care in the Slovenian Alps" description="Private dog sitting and Dog Adventure Days in Kranjska Gora, Slovenia. Calm individual care for travellers, hikers and alpine holidays with a dog." canonical="/dog-sitting-kranjska-gora/" alternateEn="/dog-sitting-kranjska-gora/" alternateSl="/sl/varstvo-psov-kranjska-gora/" eyebrow="KRANJSKA GORA / ALPINE CARE" heading="A dog sitter for <em>Kranjska Gora.</em>" intro="For alpine holidays where your dog is part of the trip — but not necessarily every climb, activity or long day." bodyTitle="Private care in an alpine destination." body="<p>Kranjska Gora is made for outdoor days, but protected areas, difficult terrain, heat, winter conditions and certain activities are not suitable for every dog. Nani Pup gives you a private alternative to leaving your dog alone in the accommodation.</p><p>Care can stay slow and local, or — for suitable dogs — become a Nani Adventure Day on an appropriate trail. We follow local nature rules and choose the route for the dog’s needs.</p>" locationNote="Kranjska Gora · Mojstrana · selected Upper Sava Valley bookings" prices={prices} faqs={faqs} guides={guides} />

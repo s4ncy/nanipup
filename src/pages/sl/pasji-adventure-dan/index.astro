@@ -1,0 +1,16 @@
+---
+import ServicePage from '../../../layouts/ServicePage.astro';
+const prices=[
+{name:'Mini Adventure',desc:'Približno 2 uri lahkotnejše dogodivščine, vohanja in gibanja.',price:'od 55 €',note:'Za kužke, ki ne potrebujejo dolge ture.'},
+{name:'Adventure Day',desc:'3–4 ure prilagojenega izleta, prevzem in vrnitev.',price:'od 85 €',note:'Bled / bližnja Gorenjska.'},
+{name:'Adventure + Memories',desc:'Dogodivščina in kratka fotografska zgodba kužka na prostem.',price:'od 180 €',note:'Za spomin na to obdobje.'}
+];
+const guides=[{tag:'KRANJSKA GORA',label:'Kranjska Gora s psom',href:'/sl/blog/kranjska-gora-s-psom/'},{tag:'BLED',label:'Bled s psom',href:'/sl/blog/bled-s-psom/'},{tag:'MEMORIES',label:'Fotografiranje psa z družino',href:'/sl/fotografiranje-psa-z-druzino/'}];
+const faqs=[
+{q:'Kakšen izlet je to?',a:'Ni nujno hrib. Lahko je gozd, lažja alpska pot, počasno raziskovanje ob vodi ali kombinacija hoje in mentalne zaposlitve.'},
+{q:'Je primerno za mladiča ali starejšega psa?',a:'Lahko, vendar je program krajši in precej nežnejši. Starost, zdravstvene omejitve in kondicijo mora lastnik povedati vnaprej.'},
+{q:'Kaj če je vročina ali nevihta?',a:'Traso in uro prilagodimo ali pa se storitev spremeni v mirnejše varstvo. Varnost ima prednost pred načrtom.'},
+{q:'Ali upoštevaš pravila Triglavskega narodnega parka?',a:'Da. Na zaščitenih območjih upoštevamo označene poti, povodec in druga lokalna pravila.'}
+];
+---
+<ServicePage lang="sl" title="Pasji Adventure Day Gorenjska | izlet za psa — Nani Pup" description="Pasji Adventure Day: kužka prevzamemo in odpeljemo na prilagojeno 2–4-urno dogodivščino po Gorenjski. Gozd, hoja, vohanje, počitek, fotografski utrinki in kratka sporočila." canonical="/sl/pasji-adventure-dan/" alternateEn="/dog-adventure-day-slovenia/" alternateSl="/sl/pasji-adventure-dan/" eyebrow="NANI ADVENTURE / GORENJSKA" heading="Tudi tvoj pes dobi svojo <em>dogodivščino.</em>" intro="Varstvo, ki ni samo čakanje: prilagojen izlet z dovolj gibanja, vohanja, počitka in novih vtisov." bodyTitle="Ne lovimo vrha. Iščemo dober pasji dan." body="<p>Pasji Adventure Day je za dneve, ko imaš svoje obveznosti ali izlet, kužku pa želiš dati več kot nekaj ur doma. Kužka prevzamemo in mu pripravimo aktivnost, ki je primerna zanj.</p><p>Pot določijo starost, zdravje, kondicija, karakter, vreme, teren in pravila območja. Energičen mlad pes lahko dobi daljšo gozdno turo, starejši kuža pa počasnejši raziskovalni sprehod z veliko vohanja in počitka.</p><p>Medtem dobiš kratke fotografske utrinke in sporočila, da veš, kako mu gre.</p>" locationNote="Bled · Radovljica · Lesce · Kranjska Gora · izbrana Gorenjska" prices={prices} faqs={faqs} guides={guides} />

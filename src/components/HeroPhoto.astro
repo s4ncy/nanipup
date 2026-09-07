@@ -1,0 +1,11 @@
+---
+const { lang='en' } = Astro.props;
+const sl = lang === 'sl';
+---
+<div class="heroPhoto" aria-label={sl ? 'Nani Pup — alpsko pasje varstvo, dogodivščine in spomini' : 'Nani Pup — alpine dog care, adventures and memories'}>
+  <img src="/nani-hero.jpg" alt={sl ? 'Kosmat nizek kuža v alpskem okolju nad Blejskim jezerom' : 'Shaggy short-legged dog in the Slovenian Alps above Lake Bled'} loading="eager" fetchpriority="high" />
+  <div class="heroPhotoVeil"></div>
+  <div class="heroPhotoNote">{sl ? <>navdihnila<br/>Nani ♡</> : <>inspired by<br/>Nani ♡</>}</div>
+  <div class="heroPhotoBadge"><strong>CARE · STORIES</strong><br/>ALPS · SLOVENIA</div>
+  <div class="heroPhotoCaption"><span>{sl ? 'Pravi dnevi. Pravi spomini.' : 'Real days. Real memories.'}</span><span>Kranjska Gora · Bled · Bohinj</span></div>
+</div>

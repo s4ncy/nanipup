@@ -1,0 +1,15 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+const prices=[
+{name:'Little Escape',desc:'Up to around 2 hours of private company, a walk and routine care.',price:'from €80',note:'For accommodation handover and shorter Bohinj plans.'},
+{name:'Alpine Half-Day',desc:'Up to around 4 hours with a proper walk, rest and updates.',price:'from €130',note:'Timing depends on your Bohinj location and transfer.'},
+{name:'Adventure Day',desc:'A tailored 3–4 hour outing for suitable dogs.',price:'from €170',note:'Route chosen for the dog, weather and local nature rules.'}
+];
+const guides=[{tag:'BOHINJ',label:'Bohinj with a dog: a calmer lake-day guide',href:'/journal/dog-friendly-bohinj/'},{tag:'ADVENTURE',label:'Nani Dog Adventure Day',href:'/dog-adventure-day-slovenia/'},{tag:'SLOVENIA',label:'Travelling Slovenia with a dog',href:'/journal/travelling-slovenia-with-dog/'}];
+const faqs=[
+{q:'Can you collect my dog from accommodation in Bohinj?',a:'Often yes, depending on the exact location, date and timing. Send the accommodation name or village in your enquiry so we can confirm logistics.'},
+{q:'Can my dog swim during care?',a:'Only where it is appropriate, safe and permitted. Bohinj and Triglav National Park have specific rules around dogs, bathing areas and sensitive waters, so the plan always follows current local guidance.'},
+{q:'Is Bohinj suitable for an Adventure Day?',a:'For many dogs, yes. The route is never fixed in advance: age, fitness, temperament, heat, terrain and protected-area rules all matter.'}
+];
+---
+<ServicePage title="Dog Sitting Bohinj | Private Dog Care & Adventure Days — Nani Pup" description="Private dog sitting and tailored Dog Adventure Days in Bohinj, Slovenia. Calm individual care for visitors staying around Lake Bohinj and nearby Gorenjska." canonical="/dog-sitting-bohinj/" alternateEn="/dog-sitting-bohinj/" alternateSl="/sl/varstvo-psov-bohinj/" eyebrow="BOHINJ / ALPINE CARE" heading="Private dog care in <em>Bohinj.</em>" intro="For lake days, longer hikes and plans your dog would be happier skipping — with care that still feels like a good day outdoors." bodyTitle="Slower days suit dogs, too." body="<p>Bohinj is one of the places that shaped the Nani Pup idea: water, forest, quieter paths and enough space to slow down. It is also a place where nature rules matter, so not every human plan is automatically a good dog plan.</p><p>Private care can stay calm around your accommodation or become a suitable Nani Adventure Day. We plan around your dog first and the route second.</p>" locationNote="Bohinj · Ribčev Laz · Stara Fužina · Bohinjska Bistrica · selected nearby stays" prices={prices} faqs={faqs} guides={guides} />

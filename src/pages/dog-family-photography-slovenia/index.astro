@@ -1,0 +1,19 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+const prices=[
+{name:'Nani Memories',desc:'A relaxed outdoor dog + family session with movement, play and connection.',price:'from €300',note:'Lake Bled / Gorenjska.'},
+{name:'Adventure + Memories',desc:'A private dog outing with a short curated photography story.',price:'from €320',note:'Can be paired with Nani Adventure Day.'},
+{name:'Travel Story',desc:'A longer dog-friendly location session for visitors to Slovenia.',price:'from €450',note:'Quoted by location and duration.'}
+];
+const faqs=[
+{q:'Does my dog need to know commands?',a:'No. The session is built around normal behaviour: walking, sniffing, playing, resting and interacting with you.'},
+{q:'Can we photograph at Lake Bled or in the mountains?',a:'Yes, with the location chosen around light, season, access and the dog’s comfort.'},
+{q:'Can this be added to dog care?',a:'Yes. Adventure + Memories turns part of a Nani outing into a small photo story.'}
+];
+const guides=[
+{tag:'BLED GUIDE',label:'Dog-Friendly Bled',href:'/journal/dog-friendly-bled/'},
+{tag:'ADVENTURE',label:'Nani Dog Adventure Day',href:'/dog-adventure-day-slovenia/'},
+{tag:'SLOVENIA',label:'Travelling Slovenia with a dog',href:'/journal/travelling-slovenia-with-dog/'}
+];
+---
+<ServicePage title="Dog & Family Photography Slovenia | Lake Bled — Nani Pup Memories" description="Natural dog and family photography around Lake Bled and the Slovenian Alps. Relaxed outdoor sessions for people who want real memories with their dog." canonical="/dog-family-photography-slovenia/" alternateEn="/dog-family-photography-slovenia/" alternateSl="/sl/fotografiranje-psa-z-druzino/" eyebrow="NANI MEMORIES / PHOTOGRAPHY" heading="The muddy paws are part of the <em>family story.</em>" intro="Natural dog + family photography around Bled and Gorenjska: no perfect posing, just the way you actually belong together." bodyTitle="Walk first. Photograph what happens." body="<p>Nani Memories is built around movement and connection rather than asking a dog to hold a pose. We walk, pause, play, cuddle and use the landscape as part of the story.</p><p>It works for local families, travellers with dogs and anyone who knows that this particular version of their dog will not last forever.</p>" locationNote="Lake Bled · Gorenjska · selected Slovenian Alps" prices={prices} faqs={faqs} guides={guides} />

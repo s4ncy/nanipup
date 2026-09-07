@@ -1,0 +1,27 @@
+---
+import Base from './Base.astro';
+import Inquiry from '../components/Inquiry.astro';
+const {
+  lang='en', title, description, canonical, alternateEn, alternateSl,
+  eyebrow, heading, intro, bodyTitle, body, prices=[], faqs=[], locationNote='',
+  guides=[]
+} = Astro.props;
+const sl = lang==='sl';
+const schema = {
+ '@context':'https://schema.org','@type':'Service','name':title,'description':description,
+ 'provider':{'@type':'PetCare','name':'Nani Pup','url':'https://nanipup.eu'},
+ 'areaServed': locationNote || (sl?'Slovenija':'Slovenia')
+};
+---
+<Base {lang} {title} {description} {canonical} {alternateEn} {alternateSl} {schema}>
+<section class="pageHero"><div class="breadcrumb">NANI PUP / {eyebrow}</div><h1 set:html={heading}></h1><p>{intro}</p></section>
+<section class="pageSection">
+ <div class="sectionHead"><div><div class="kicker">{sl ? 'NANI VARSTVO / OSEBNO' : 'PRIVATE CARE / NANI PUP'}</div><h2>{bodyTitle}</h2></div><p>{locationNote}</p></div>
+ <div class="lead" style="max-width:920px" set:html={body}></div>
+ {prices.length > 0 && <div class="pricing">{prices.map((p) => <div class="priceCard"><h3>{p.name}</h3><p>{p.desc}</p><b>{p.price}</b><p>{p.note}</p></div>)}</div>}
+</section>
+<section class="localBand"><div class="inner"><h2>{sl ? 'Majhna kapaciteta je del storitve.' : 'Small capacity is part of the service.'}</h2><p>{sl ? 'Nani Pup ni klasičen pasji hotel. Termine sprejemamo omejeno, da lahko varstvo ostane osebno in prilagojeno karakterju psa. Pred prvim daljšim varstvom se po potrebi dogovorimo za spoznavni sprehod.' : 'Nani Pup is not a high-volume kennel. Bookings are intentionally limited so care can stay personal and adapted to the dog. For longer first-time care, a short meet-and-walk can be arranged where practical.'}</p></div></section>
+{guides.length>0 && <section class="relatedGuides"><div class="kicker">{sl?'NANI BLOG / LOKALNI VODIČI':'FIELD NOTES / LOCAL GUIDES'}</div><h2>{sl?'Preden načrtuješ dan …':'Before you plan the day …'}</h2><div class="guideGrid">{guides.map((g)=><a class="guideLink" href={g.href}><span>{g.tag}</span><h3>{g.label}</h3><b>{sl?'Preberi →':'Read →'}</b></a>)}</div></section>}
+{faqs.length>0 && <section class="faq"><div class="kicker">FAQ</div><h2>{sl?'Najpogostejša vprašanja':'Questions people ask'}</h2>{faqs.map((f)=><details><summary>{f.q}</summary><p>{f.a}</p></details>)}</section>}
+<Inquiry lang={lang}/>
+</Base>

@@ -1,0 +1,19 @@
+---
+import ServicePage from '../../../layouts/ServicePage.astro';
+const prices=[
+{name:'Sprehod / obisk',desc:'Sprehod, družba, hrana in osnovna rutina.',price:'od 25 €',note:'Izbrani termini in lokacije v Ljubljani.'},
+{name:'Pol dneva City Nani',desc:'Daljše individualno varstvo s sprehodom in počitkom.',price:'od 55 €',note:'Cena je odvisna od lokacije in logistike.'},
+{name:'Celodnevno varstvo',desc:'Daljši individualni termin za službo, dogodek ali pot.',price:'od 90 €',note:'Omejena razpoložljivost.'}
+];
+const faqs=[
+{q:'Ali je Ljubljana vsakodnevno območje Nani Pup?',a:'Ne še. Glavna baza ostaja Gorenjska, v Ljubljani pa sprejemamo izbrane termine po povpraševanju.'},
+{q:'Ali lahko prideš na dom?',a:'Možno je več oblik varstva. V povpraševanju napiši, česa je kuža vajen in v katerem delu Ljubljane ste.'},
+{q:'Je varstvo individualno?',a:'Koncept Nani Pup je majhna kapaciteta in čim bolj individualen pristop. Dva psa iz istega gospodinjstva sta lahko izjema.'}
+];
+const guides=[
+{tag:'SLOVENIJA',label:'Potovanje po Sloveniji s psom',href:'/sl/blog/potovanje-po-sloveniji-s-psom/'},
+{tag:'VZGOJA',label:'Nauči svojega psa — 7-dnevni izziv',href:'/sl/izziv/'},
+{tag:'GORENJSKA',label:'Bled s psom',href:'/sl/blog/bled-s-psom/'}
+];
+---
+<ServicePage lang="sl" title="Varstvo psov Ljubljana | individualni pasji varuh — Nani Pup" description="Izbrano individualno varstvo psov v Ljubljani: sprehodi, obiski, pol-dnevno in celodnevno varstvo z majhno kapaciteto in osebnim pristopom." canonical="/sl/varstvo-psov-ljubljana/" alternateEn="/dog-sitting-ljubljana/" alternateSl="/sl/varstvo-psov-ljubljana/" eyebrow="LJUBLJANA / CITY NANI" heading="Individualno varstvo psov v <em>Ljubljani.</em>" intro="Za kužke, ki jim ena mirna oseba in njihov lasten ritem ustrezata bolj kot veliko skupinsko varstvo." bodyTitle="Mestno varstvo, še vedno po Nani principu." body="<p>Nani Pup ima glavno bazo na Gorenjskem, v Ljubljani pa sprejemamo izbrane termine za sprehode, obiske in daljše individualno varstvo.</p><p>Pred rezervacijo se pogovorimo o rutini, odnosu do drugih psov, posebnostih in tem, ali je za kužka najbolj mirna rešitev obisk na domu, sprehod ali daljše varstvo.</p>" locationNote="Ljubljana · izbrani termini po povpraševanju" prices={prices} faqs={faqs} guides={guides} />

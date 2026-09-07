@@ -1,0 +1,92 @@
+---
+import { site } from '../config';
+const {
+  title = 'Nani Pup — Alpine Dog Care & Stories in Slovenia',
+  description = 'Private dog care, alpine dog adventures, dog photography and dog-friendly Slovenia knowledge around Lake Bled, Bohinj, Kranjska Gora and Gorenjska.',
+  lang = 'en',
+  canonical = Astro.url.pathname,
+  alternateEn = '/',
+  alternateSl = '/sl/',
+  schema = null,
+} = Astro.props;
+const canon = new URL(canonical, site.url).href;
+const enUrl = new URL(alternateEn, site.url).href;
+const slUrl = new URL(alternateSl, site.url).href;
+const defaultSchema = {
+  '@context':'https://schema.org',
+  '@type':'PetCare',
+  name:site.name,
+  url:site.url,
+  email:site.email,
+  areaServed:site.areas,
+  description
+};
+const sl = lang === 'sl';
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canon} />
+  <link rel="alternate" hreflang="en" href={enUrl} />
+  <link rel="alternate" hreflang="sl" href={slUrl} />
+  <link rel="alternate" hreflang="x-default" href={enUrl} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canon} />
+  <meta property="og:image" content={new URL('/nani-hero.jpg', site.url).href} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={new URL('/nani-hero.jpg', site.url).href} />
+  <meta name="theme-color" content="#17231c" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json" set:html={JSON.stringify(schema || defaultSchema)}></script>
+</head>
+<body>
+<div class="topline"></div>
+<nav class="nav wrap">
+  <a class="brand" href={sl ? '/sl/' : '/'}><span class="brandmark">N</span> NANI PUP</a>
+  <div class="navlinks">
+    <a href={sl ? '/sl/#care' : '/#care'}>{sl ? 'Alpine Care' : 'Alpine Care'}</a>
+    <a href={sl ? '/sl/pasji-adventure-dan/' : '/dog-adventure-day-slovenia/'}>{sl ? 'Dogodivščine' : 'Adventures'}</a>
+    <a href={sl ? '/sl/fotografiranje-psa-z-druzino/' : '/dog-family-photography-slovenia/'}>{sl ? 'Fotografiranje' : 'Photoshoots'}</a>
+    <a href={sl ? '/sl/blog/' : '/journal/'}>Field Notes</a>
+    <a href={sl ? '/sl/trgovina/' : '/shop/'}>{sl ? 'Trgovina' : 'Nani Goods'}</a>
+  </div>
+  <div class="navright">
+    <a class="lang" href={sl ? alternateEn : alternateSl}>{sl ? 'EN' : 'SL'}</a>
+    <a class="pill dark" href={sl ? '/sl/#inquiry' : '/#inquiry'}>{sl ? 'Pošlji povpraševanje' : 'Plan your dog’s day'}</a>
+  </div>
+</nav>
+<main class="wrap"><slot /></main>
+<footer>
+  <div class="footbrand">Nani Pup.</div>
+  <div class="footerPlaces">
+    <a href={sl ? '/sl/varstvo-psov-kranjska-gora/' : '/dog-sitting-kranjska-gora/'}>Kranjska Gora</a> ·
+    <a href={sl ? '/sl/varstvo-psov-bled/' : '/dog-sitting-bled-slovenia/'}>{sl ? 'Bled' : 'Lake Bled'}</a> ·
+    <a href={sl ? '/sl/varstvo-psov-bohinj/' : '/dog-sitting-bohinj/'}>Bohinj</a> ·
+    <a href={sl ? '/sl/varstvo-psov-gorenjska/' : '/dog-sitting-gorenjska/'}>Gorenjska</a> ·
+    <a href={sl ? '/sl/varstvo-psov-ljubljana/' : '/dog-sitting-ljubljana/'}>Ljubljana</a>
+  </div>
+  <div class="footerTagline">{sl ? 'Alpine care · dogodivščine · fotografije · znanje · Nani Goods' : 'Alpine care · adventures · photographs · knowledge · Nani Goods'}</div>
+</footer>
+<script is:inline>
+  document.querySelectorAll('form[data-mailto]').forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const subject = encodeURIComponent(`Nani Pup enquiry — ${data.get('dog') || 'dog care'}`);
+      const body = encodeURIComponent(Array.from(data.entries()).map(([k,v]) => `${k}: ${v}`).join('\n'));
+      window.location.href = `mailto:hello@nanipup.eu?subject=${subject}&body=${body}`;
+    });
+  });
+</script>
+</body>
+</html>

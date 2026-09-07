@@ -1,0 +1,15 @@
+---
+import ServicePage from '../../../layouts/ServicePage.astro';
+const prices=[
+{name:'Kratko varstvo',desc:'Do približno 2 uri individualne družbe, sprehoda in rutine.',price:'od 35 €',note:'Cena je odvisna od lokacije prevzema v Bohinju.'},
+{name:'Pol dneva',desc:'Do približno 4 ure z gibanjem, počitkom, fotografijami in kratkimi sporočili.',price:'od 55 €',note:'Po dogovoru glede lokacije in potreb kužka.'},
+{name:'Pasji Adventure Day',desc:'3–4 ure prilagojene dogodivščine za primerne kužke.',price:'od 95 €',note:'Pot izberemo glede na psa, vreme in pravila v naravi.'}
+];
+const guides=[{tag:'BOHINJ S PSOM',label:'Bohinj s psom: kaj je dobro vedeti',href:'/sl/blog/bohinj-s-psom/'},{tag:'DOGODIVŠČINA',label:'Pasji Adventure Day',href:'/sl/pasji-adventure-dan/'},{tag:'SLOVENIJA',label:'Potovanje po Sloveniji s psom',href:'/sl/blog/potovanje-po-sloveniji-s-psom/'}];
+const faqs=[
+{q:'Ali lahko kužka prevzameš pri nastanitvi v Bohinju?',a:'Pogosto da, odvisno od točne lokacije, termina in ure. V povpraševanju napiši vas ali nastanitev, da lahko potrdimo logistiko.'},
+{q:'Ali se lahko kuža med varstvom kopa?',a:'Samo tam, kjer je to dovoljeno, varno in smiselno. V Bohinju in Triglavskem narodnem parku veljajo posebna pravila za pse, kopalna območja in občutljive vode.'},
+{q:'Je Bohinj primeren za Adventure Day?',a:'Za veliko kužkov da, vendar ni ene fiksne trase. Starost, kondicija, karakter, vročina, teren in pravila območja določijo, kam gremo.'}
+];
+---
+<ServicePage lang="sl" title="Varstvo psov Bohinj | individualno varstvo in pasji Adventure Day — Nani Pup" description="Individualno varstvo psov v Bohinju: kratko in pol-dnevno varstvo ter pasji Adventure Day za obiskovalce in domačine okoli Bohinjskega jezera." canonical="/sl/varstvo-psov-bohinj/" alternateEn="/dog-sitting-bohinj/" alternateSl="/sl/varstvo-psov-bohinj/" eyebrow="BOHINJ / ALPINE CARE" heading="Varstvo psov v <em>Bohinju.</em>" intro="Za dneve ob jezeru, daljše pohode in načrte, ki bi jih tvoj kuža raje izpustil — brez tega, da je njegov dan zato slabši." bodyTitle="Tudi počasnejši dnevi so pasji dnevi." body="<p>Bohinj je eden od krajev, iz katerih je zrasla ideja Nani Pup: voda, gozd, mirnejše poti in dovolj prostora, da se ne mudi. Hkrati je to občutljivo naravno okolje, zato ni vsak človeški načrt avtomatsko primeren tudi za psa.</p><p>Varstvo lahko ostane mirno ob nastanitvi ali pa ga za primernega kužka spremenimo v Nani Adventure Day. Najprej izberemo dan za psa, šele nato pot.</p>" locationNote="Bohinj · Ribčev Laz · Stara Fužina · Bohinjska Bistrica · izbrane bližnje nastanitve" prices={prices} faqs={faqs} guides={guides} />

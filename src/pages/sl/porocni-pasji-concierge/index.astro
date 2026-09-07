@@ -1,0 +1,19 @@
+---
+import ServicePage from '../../../layouts/ServicePage.astro';
+const prices=[
+{name:'Kuža pri obredu',desc:'Prevzem, miren prihod, pomoč pri fotografijah/obredu in varstvo po nastopu.',price:'od 140 €',note:'Za krajši, jasno določen del poroke.'},
+{name:'Poročni Nani concierge',desc:'Prevoz, vodenje, sprehodi, odmori in individualno varstvo okoli poročnega urnika.',price:'od 250 €',note:'Bled / Gorenjska; drugje po dogovoru.'},
+{name:'Concierge + Memories',desc:'Poročna logistika za psa + kratka ločena fotografska zgodba.',price:'od 380 €',note:'Za družine, ki želijo več spominov s kužkom.'}
+];
+const faqs=[
+{q:'Je bolje, da je pes na poroki samo del dneva?',a:'Za večino psov da. Obred in fotografije so lahko čudoviti, nato pa je zanje veliko prijetnejši miren sprehod, hrana in počitek.'},
+{q:'Ali lahko koordiniraš s fotografom ali organizatorjem?',a:'Da. Kratek skupen časovni plan je najboljši način, da so prevzem, fotografije in odhod brez stresa.'},
+{q:'Ali lahko psa prevzameš pri hotelu ali apartmaju?',a:'Na Bledu in Gorenjskem pogosto da, po predhodnem dogovoru.'}
+];
+const guides=[
+{tag:'POROKA + KUŽA',label:'Kako vključiti psa v poroko brez stresa',href:'/sl/blog/poroka-s-psom/'},
+{tag:'BLED',label:'Bled s psom',href:'/sl/blog/bled-s-psom/'},
+{tag:'VARSTVO',label:'Varstvo psov Bled',href:'/sl/varstvo-psov-bled/'}
+];
+---
+<ServicePage lang="sl" title="Pes na poroki | poročni pasji concierge Bled in Slovenija — Nani Pup" description="Poročni pasji concierge na Bledu in Gorenjskem: prevzem, prevoz, pomoč pri fotografijah in obredu, sprehod, odmori in individualno varstvo psa." canonical="/sl/porocni-pasji-concierge/" alternateEn="/wedding-dog-concierge-slovenia/" alternateSl="/sl/porocni-pasji-concierge/" eyebrow="POROKA / KUŽA" heading="Naj bo zraven pri <em>pravem delu</em> poroke." intro="Kuža je lahko del obreda, fotografij in vajine zgodbe — brez tega, da mora zdržati cel poročni dan." bodyTitle="Poročna logistika, ki upošteva tudi psa." body="<p>Pri Nani Pup lahko poskrbimo za prevzem, miren sprehod pred fotografijami, prihod ob pravi uri, vodenje med fotografiranjem ali obredom ter nato za odhod, hrano, počitek in individualno varstvo.</p><p>Tako je kuža res del vajinega dne, vendar ga ne izpostavljamo več uram čakanja, glasbi, vročini ali neprekinjenemu dogajanju.</p>" locationNote="Bled · Gorenjska · izbrane poroke po Sloveniji" prices={prices} faqs={faqs} guides={guides} />

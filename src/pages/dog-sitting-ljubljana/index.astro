@@ -1,0 +1,14 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+const prices=[
+{name:'City Visit',desc:'Walk, company, food and routine care.',price:'from €35',note:'Selected Ljubljana dates only.'},
+{name:'Half-Day City Nani',desc:'Longer private care with walk and downtime.',price:'from €85',note:'Quoted by neighbourhood and timing.'},
+{name:'Full-Day City Nani',desc:'A longer private care window for travel, events or work.',price:'from €140',note:'Limited availability.'}
+];
+const guides=[{tag:'SLOVENIA',label:'Travelling Slovenia with a dog',href:'/journal/travelling-slovenia-with-dog/'},{tag:'WEEKLY CLUB',label:'Teach Your Dog challenge',href:'/challenge/'},{tag:'ALPS',label:'Dog-Friendly Bled',href:'/journal/dog-friendly-bled/'}];
+const faqs=[
+{q:'Is Ljubljana a regular daily service area?',a:'Not at launch. Ljubljana is offered on selected dates and by enquiry, while Gorenjska remains Nani Pup’s core territory.'},
+{q:'Do you stay in my home?',a:'The exact care format depends on the dog, location and booking length. Describe what your dog is used to and we will suggest the calmest option.'}
+];
+---
+<ServicePage title="Private Dog Sitting Ljubljana | Nani Pup Slovenia" description="Selected private dog sitting and dog care in Ljubljana, Slovenia. Individual, relationship-led care for locals, visitors and event days." canonical="/dog-sitting-ljubljana/" alternateEn="/dog-sitting-ljubljana/" alternateSl="/sl/varstvo-psov-ljubljana/" eyebrow="LJUBLJANA / CITY NANI" heading="Private dog care in <em>Ljubljana.</em>" intro="Selected city bookings for dogs who do better with one familiar human than a busy group environment." bodyTitle="City care, still Nani-style." body="<p>Nani Pup’s home territory is Gorenjska, but selected Ljubljana dates are available for private walks, visits and longer care. The same principle applies: small capacity, direct communication and a day shaped around the dog rather than a generic schedule.</p>" locationNote="Ljubljana · selected dates by enquiry" prices={prices} faqs={faqs} guides={guides} />

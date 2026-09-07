@@ -1,0 +1,27 @@
+---
+import Base from './Base.astro';
+const {
+  lang='en',title,description,canonical,alternateEn,alternateSl,eyebrow,heading,dek,
+  date='2026-09-07',related=[],
+  ctaTitle,ctaText,ctaHref,ctaLabel,sources=[]
+}=Astro.props;
+const sl=lang==='sl';
+const schema={'@context':'https://schema.org','@type':'BlogPosting','headline':title,'description':description,'datePublished':date,'dateModified':date,'publisher':{'@type':'Organization','name':'Nani Pup'},'mainEntityOfPage':new URL(canonical,'https://nanipup.eu').href};
+const finalCtaTitle = ctaTitle || (sl?'Potrebuješ varstvo?':'Need dog care?');
+const finalCtaText = ctaText || (sl?'Če del dneva ni primeren za tvojega psa, lahko pri Nani Pup poskrbimo za mirno individualno varstvo.':'If part of your day is not suitable for your dog, Nani Pup can turn it into calm private care.');
+const finalCtaHref = ctaHref || (sl?'/sl/#inquiry':'/#inquiry');
+const finalCtaLabel = ctaLabel || (sl?'Poglej možnosti →':'See private care →');
+---
+<Base {lang} {title} {description} {canonical} {alternateEn} {alternateSl} {schema}>
+<section class="pageHero"><div class="breadcrumb">NANI PUP / {sl?'BLOG':'FIELD NOTES'} / {eyebrow}</div><h1 set:html={heading}></h1><p>{dek}</p><div class="blogMeta">{date} · NANI PUP FIELD NOTES</div></section>
+<div class="contentGrid">
+ <article class="article">
+   <slot />
+   {sources.length > 0 && <div class="sourceBox"><strong>{sl?'Preveri tudi uradne informacije':'Useful official information'}</strong>{sources.map((s)=><a href={s.href} target="_blank" rel="noopener">↗ {s.label}</a>)}</div>}
+ </article>
+ <aside class="sidebar">
+  <div class="sideCard serviceCta"><div class="kicker">NANI / {sl?'VARSTVO':'PRIVATE CARE'}</div><h3>{finalCtaTitle}</h3><p>{finalCtaText}</p><a class="pill dark" href={finalCtaHref}>{finalCtaLabel}</a></div>
+  {related.length>0 && <div class="sideCard"><h3>{sl?'Povezano':'Keep reading'}</h3>{related.map((r)=><p><a href={r.href}>→ {r.label}</a></p>)}</div>}
+ </aside>
+</div>
+</Base>
